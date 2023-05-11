@@ -20,23 +20,27 @@ export const questions = [
             {
                 label: 'Street Address',
                 type: 'text',
-                value: 'streetAddress'
+                value: 'streetAddress',
+                required: true,
             },
             {
                 label: 'City',
                 type: 'text',
-                value: 'city'
+                value: 'city',
+                required: true,
             },
             {
                 label: 'State',
                 type: 'select',
                 value: 'state',
                 options: ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'],
+                required: true,
             },
             {
                 label: 'Zip Code',
                 type: 'text',
-                value: 'zipcode'
+                value: 'zipcode',
+                required: true,
             },
         ]
         

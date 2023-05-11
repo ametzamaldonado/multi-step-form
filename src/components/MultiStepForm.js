@@ -5,7 +5,7 @@ export const MultiStepForm = (props) => {
   const { questions, step, onPageAnswerUpdate, pagesAnswers } = props;
 
   return (
-    <div className="text-left">
+    <>
       {questions[step - 1].items?.map((item, index) => {
         return (
           <FormItemType
@@ -16,6 +16,6 @@ export const MultiStepForm = (props) => {
           />
         );
       })}
-    </div>
+    </>
   );
 };

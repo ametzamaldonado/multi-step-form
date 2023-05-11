@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import { MultiStepForm } from "./components/MultiStepForm";
 import { questions } from "./data/questions";
 
@@ -8,7 +8,6 @@ function App() {
   const [submitted, setSubmitted] = useState(false);
   const [pagesAnswers, setPagesAnswers] = useState({});
 
-  console.log(pagesAnswers)
   const previousButton = () => {
     if (index > 1) {
       setIndex(index - 1);
@@ -47,9 +46,15 @@ function App() {
               />
             </div>
             <div className="form-buttons">
-              <button onClick={previousButton} disabled={index === 1}>
-                Previous
-              </button>
+              {
+                index > 1 ?  
+                <button onClick={previousButton} disabled={index === 1}>
+                  Previous
+                </button> 
+                :
+                null
+              }
+              
               <button onClick={nextButton}>
                 {index === 3 ? "Submit" : "Next"}
               </button>
